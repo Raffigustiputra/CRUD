@@ -1,0 +1,24 @@
+@media print {
+    /* Sembunyikan semua elemen kecuali tabel */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Tampilkan tabel dan anak-anaknya */
+    table, table * {
+        visibility: visible;
+    }
+
+    /* Atur posisi tabel agar pas dengan halaman cetak */
+    table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Sembunyikan elemen seperti tombol, form pencarian, dan modal */
+    .btn, form, .modal, .pagination {
+        display: none !important;
+    }
+}
